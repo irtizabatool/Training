@@ -1,0 +1,15 @@
+let employees = new Array("Mike","Michael","Mark","Phoebe","Joey");
+console.log("Total number of employees are: " + employees.length);
+console.log(employees);
+console.log("Sorted names of employees is: ");
+employees.sort();
+console.log(employees);
+console.log("Reversing the array elements");
+employees.reverse();
+console.log(employees);
+console.log("After adding new employee");
+employees.push("Chandler");
+console.log(employees);
+console.log("Removing the last employee");
+employees.pop();
+console.log(employees);
