@@ -13,3 +13,8 @@ console.log(employees);
 console.log("Removing the last employee");
 employees.pop();
 console.log(employees);
+console.log("Using fill method");
+employees.fill(0,3);
+console.log(employees);
+console.log("Using join method");
+console.log(employees.join(" $ "));
