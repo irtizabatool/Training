@@ -1,13 +1,15 @@
-function sum(n1, n2) {
-    return n1 + n2;
+function add(n1, n2) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => reject(new Error('Unable to add two numbers')), 2000);
+    });
 }
 async function asyncSumAndMultiply(num1, num2, num3) {
     console.log(`The Three numbers are: ${ num1 }, ${ num3 }, ${ num3 }`);
     let sum;
     try{
-        sum = await sum(num1, num2);
+        sum = await add(num1, num2);
     } catch(err){
-        console.log(`Error: ${e.message}`);
+        console.log(`Error: ${err.message}`);
         sum = 0;
     }
     let product = num3 * sum;
