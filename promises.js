@@ -1,14 +1,13 @@
-console.log('Script start');
-setTimeout(() => {
-  console.log('setTimeout 1');
-}, 3000);
-setTimeout(() => {
-  console.log('setTimeout 2');
-}, 0);
-new Promise((resolve, reject) => {
-    resolve('Promise 1 resolved');
-}).then(res => console.log(res)).catch(err => console.log(err));
-new Promise((resolve, reject) => {
-    resolve('Promise 2 resolved');
-}).then(res => console.log(res)).catch(err => console.log(err));
-console.log('Script End'); 
+let p = new Promise((resolve, reject) => {
+  let a = 2+1;
+  if (a === 2){
+      resolve('Success');
+  } else{
+      reject('Failed');
+  }
+})
+p.then((message) => {
+  console.log(`This is in then: ${ message }`);
+}).catch((message) => {
+  console.log(`This is in catch: ${ message }`);
+});
