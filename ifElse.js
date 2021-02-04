@@ -1,4 +1,4 @@
-const number = 0;
+const number = 2;
 //Using if..else
 console.log("Using if..else...");
 if (number>0) {
@@ -20,5 +20,5 @@ else {
 }
 //Using Ternary operator
 console.log("Using ternary operator");
-let result = (number>0) ? "The number is positive" : "The number is either negative or 0";
+let result = (number>0) ? "The number is positive" : (number == 0) ? "The number is zero" : "The number is negative";
 console.log(result);

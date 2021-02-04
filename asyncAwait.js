@@ -1,9 +1,14 @@
-function add(n1, n2) {
+async function add(n1, n2) {
+    console.log("This is an add function");
     return new Promise((resolve, reject) => {
-        setTimeout(() => resolve(n1 + n2), 2000);
+        if (n1 > 0){
+            resolve(n1 + n2);
+        } else {
+            reject(0);
+        }
     });
 }
-async function asyncSumAndMultiply(num1, num2, num3) {
+async function sumAndMultiply(num1, num2, num3) {
     console.log(`The Three numbers are: ${ num1 }, ${ num2 }, ${ num3 }`);
     let sum;
     try{
@@ -13,8 +18,16 @@ async function asyncSumAndMultiply(num1, num2, num3) {
         sum = 0;
     }
     let product = num3 * sum;
+    console.log("This is sum and multiply function");
     console.log(`Sum of First two numbers is: ${ sum }`);
     console.log(`Product of the sum of first two numbers and the third number is: ${ product }`);
-    return product;
+    return new Promise((resolve, reject) => {
+        resolve(product);
+    });
 }
-asyncSumAndMultiply(-2, 1, 3);
+async function display() {
+    console.log("this is a display function");
+    let pro = await sumAndMultiply(1, 1, 3);
+    console.log("After sum and multiply");
+}
+display();

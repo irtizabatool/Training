@@ -1,3 +1,8 @@
+const p4 = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('Fourth Promise fulfilled at the end '), 3000);
+}).then((message) => {
+    console.log(message);
+})
 const p1 = new Promise((resolve, reject) => {
     setTimeout(() => resolve('First Promise'), 1000);
 })
@@ -13,9 +18,4 @@ Promise.all([
     p3
 ]).then((messages) => {
     console.log(messages);
-})
-const p4 = new Promise((resolve, reject) => {
-    setTimeout(() => resolve('Fourth Promise fulfilled at the end '), 3000);
-}).then((message) => {
-    console.log(message);
 })
