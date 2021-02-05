@@ -11,3 +11,9 @@ console.log(XO('xxOo'));
 console.log(XO('xxxm'));
 console.log(XO('Oo'));
 console.log(XO('ooom'));
+let str = "abcd";
+strArr = Array.from(str);
+console.log(strArr.join("-"));
+for (let i = 0; i<str.length; i++) {
+    
+}
