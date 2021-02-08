@@ -113,7 +113,7 @@ equalBtn.addEventListener('click', button => {
 });
 
 clearBtn.addEventListener('click', button => {
-    calculations. clearDisplay();
+    calculations.clearDisplay();
     calculations.updateOutput();
 });
 
