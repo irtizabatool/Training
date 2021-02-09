@@ -69,7 +69,8 @@ button:focus{
 }
 
 #messages {
-  width: 90%;
+  margin-top: 2rem;
+  width: 98%;
   height: 25rem;
   justify-content: space-around;
   border-radius: 10px;

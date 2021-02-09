@@ -47,11 +47,11 @@ receiver.addEventListener("change", function(){
 button.addEventListener("click", function(){
 	let arrV = getArray(sender.value, receiver.value);
     if(arrV.sender == sender.value && arrV.receiver == receiver.value){
-        arrV.message2.push('</br>' + textbox.value);
+        arrV.message1.push('</br>' + textbox.value);
         sMsg.innerHTML = arrV.message1;
         rMsg.innerHTML = arrV.message2;
-    } else{
-        arrV.message1.push('</br>' + textbox.value);
+    } else {
+        arrV.message2.push('</br>' + textbox.value + '</br>');
         sMsg.innerHTML = arrV.message2;
         rMsg.innerHTML = arrV.message1;
     }
