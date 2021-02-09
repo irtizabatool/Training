@@ -2,33 +2,49 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-   
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title></title>
   </head>
   <body>
-    <div id="wrapper">
+   
+      <div class="title">
+        <h1>JavaScript Chat App</h1>
+      </div>
     <div id = "container">
-      <p style="float: left">Sender
-        <select id="sender" >
+      <div class = "select-box">
+      <span class = "label">Sender: </span>
+        <select id="sender" class="select-sender">
             <option value = 1>user1</option>
             <option value = 2>user2</option>
              <option value = 3>user3</option>
             <option value = 4>user4</option>
              <option value = 5>user5</option>
-        </select></p>
-       <p style="float: left">Receiver
-         <select id="receiver" >
+        </select>
+        <i class="fa fa-chevron-down" aria-hidden="true"></i>    
+          <span class="label">Receiver: </span>
+         <select id="receiver" class="select-receiver">
             <option value = 1>user1</option>
             <option value = 2>user2</option>
              <option value = 3>user3</option>
             <option value = 4>user4</option>
              <option value = 5>user5</option>
-        </select></p>
-        <input type = "text" id = "textbox">
-        <button id = "button">SEND</button></br>
+        </select>
+        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+      </div>
+        <div class="select-box">
+        <div style="float: left;">
+        <input type = "text" id = "textbox" class="textbox" placeholder="Your Message here">
+        <button id = "button">SEND</button>
+      </div>
+        </div>
         <div id = "messages"></div>
-    </div>
-    </div>
+      </div>
+      
+   
+        
+    
+    
     <script src = "script.js" ></script>
   </body>
 </html>
