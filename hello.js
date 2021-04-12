@@ -8,6 +8,7 @@ async function d() {
 for (let i = 0; i<5; i++) {
  	let c = await b(i);
         console.log(c);
+        console.log(b(i));
 }
 }
 
