@@ -1,21 +1,24 @@
-let a = [11, 12, 13, 14, 15];
-function b(x) {
-  let p = new Promise((res,err) => {
-            setTimeout(() => {},2000)
-        })
-        p.then(() => {
-            console.log(x);
-            res(a[x]);
-        });
-return p;
+const number = 2;
+//Using if..else
+console.log("Using if..else...");
+if (number>0) {
+  console.log("The number is positive");
 }
-async function d() {
-for (let i = 0; i<5; i++) {
- 	let c = await b(i);
-console.log(c);
+else {
+  console.log("The number is either negative or 0");
 }
+//Using if..else if
+console.log("Using if..else if...");
+if (number > 0) {
+  console.log("The number is positive");
 }
-
-
-
-
+else if (number === 0) {
+  console.log("The number is 0");
+}
+else {
+  console.log("The number is negative");
+}
+//Using Ternary operator
+console.log("Using ternary operator");
+let result = (number>0) ? "The number is positive" : (number == 0) ? "The number is zero" : "The number is negative";
+console.log(result);
